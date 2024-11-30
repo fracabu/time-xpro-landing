@@ -8,7 +8,7 @@ import { TestimonialsSection } from './components/TestimonialsSection';
 import { FAQSection } from './components/FAQSection';
 import { ContactForm } from './components/ContactForm';
 import { Footer } from './components/Footer';
-import '../dist/output.css';
+
 
 
 // Componente che contiene tutta la landing page
