@@ -1,5 +1,4 @@
 import React from 'react';
-import { Play } from 'lucide-react';
 
 export const VideoSection: React.FC = () => {
   return (
@@ -9,19 +8,27 @@ export const VideoSection: React.FC = () => {
           See TimeX Pro in Action
         </h2>
         <div className="max-w-4xl mx-auto">
+          {/* Video Player */}
           <div className="relative aspect-video bg-gray-900 rounded-2xl overflow-hidden">
-            <iframe
+            <video
               className="absolute inset-0 w-full h-full"
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-              title="TimeX Pro Demo Video"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
+              controls
+              poster="/assets/video-thumbnail.jpg" // Opzionale: immagine di anteprima
+            >
+              <source src="/src/assets/TimeX_Pro_SmartWatch.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
+          {/* Call-to-Action Button */}
           <div className="mt-8 text-center">
-            <button className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-500 transition-colors">
-              <Play className="w-5 h-5" />
-              Watch Full Demo
+            <button
+              className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-500 transition-colors"
+              onClick={() => {
+                const videoElement = document.querySelector('video') as HTMLVideoElement;
+                videoElement?.play();
+              }}
+            >
+              Play Video
             </button>
           </div>
         </div>
