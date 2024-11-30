@@ -10,14 +10,15 @@ export const VideoSection: React.FC = () => {
         <div className="max-w-4xl mx-auto">
           {/* Video Player */}
           <div className="relative aspect-video bg-gray-900 rounded-2xl overflow-hidden">
-            <video
-              className="absolute inset-0 w-full h-full"
-              controls
-              poster="/assets/video-thumbnail.jpg" // Opzionale: immagine di anteprima
-            >
-              <source src="/src/assets/TimeX_Pro_SmartWatch.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+          <video
+  className="absolute inset-0 w-full h-full"
+  controls
+  poster="/assets/video-thumbnail.jpg" // Se hai un'immagine di anteprima
+>
+  <source src="/assets/TimeX_Pro_SmartWatch.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+
           </div>
           {/* Call-to-Action Button */}
           <div className="mt-8 text-center">
