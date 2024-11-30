@@ -9,13 +9,30 @@ import { FAQSection } from './components/FAQSection';
 import { ContactForm } from './components/ContactForm';
 import { Footer } from './components/Footer';
 
+// Componente che contiene tutta la landing page
+const LandingPage = () => {
+  return (
+    <>
+      <HeroSection />
+      <FeaturesSection />
+      <PricingSection />
+      <VideoSection />
+      <TestimonialsSection />
+      <FAQSection />
+      <ContactForm />
+    </>
+  );
+};
+
 function App() {
   return (
     <Router>
       <div className="min-h-screen">
-        {/* Definizione delle rotte */}
         <Routes>
-          <Route path="/" element={<HeroSection />} />
+          {/* Rotta principale che mostra tutta la landing page */}
+          <Route path="/" element={<LandingPage />} />
+          
+          {/* Rotte individuali per la navigazione diretta */}
           <Route path="/features" element={<FeaturesSection />} />
           <Route path="/pricing" element={<PricingSection />} />
           <Route path="/video" element={<VideoSection />} />
@@ -23,7 +40,6 @@ function App() {
           <Route path="/faq" element={<FAQSection />} />
           <Route path="/contact" element={<ContactForm />} />
         </Routes>
-        {/* Footer statico */}
         <Footer />
       </div>
     </Router>
