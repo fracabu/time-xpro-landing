@@ -8,16 +8,16 @@ export const HeroSection: React.FC = () => {
       <div className="container mx-auto px-6 py-16 flex flex-col md:flex-row items-center">
         {/* Testo Animato */}
         <div className="md:w-1/2 text-center md:text-left animate-fade-in-down">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 mx-10">
             The Future on Your Wrist
           </h1>
-          <p className="text-xl text-gray-300 mb-8">
+          <p className="text-xl text-gray-300 mb-8 mx-10">
             TimeX Pro combines cutting-edge technology with premium design.
           </p>
           <Link to="/pricing">
             <button className="bg-blue-600 text-white px-8 py-3 rounded-full text-lg font-semibold 
                                transition-all duration-300 hover:bg-blue-500 hover:shadow-lg 
-                               hover:shadow-blue-500/50 flex items-center gap-2 animate-fade-in-up">
+                               hover:shadow-blue-500/50 flex items-center gap-2 animate-fade-in-up mx-10">
               Shop Now
               <ArrowRight className="w-5 h-5" />
             </button>
