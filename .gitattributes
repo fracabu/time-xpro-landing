@@ -1,28 +1,48 @@
-# JavaScript e TypeScript
-*.js linguaggio=JavaScript
-*.jsx linguaggio=JavaScript
-*.ts linguaggio=TypeScript
-*.tsx linguaggio=TypeScript
+# Auto detect text files and perform LF normalization
+* text=auto
 
-# Vue.js (se lo usi)
-*.vue linguaggio=Vue
+# TypeScript files
+*.ts linguist-language=TypeScript
+*.tsx linguist-language=TypeScript
 
-# CSS e Tailwind
-*.css linguaggio=CSS
-*.scss linguaggio=CSS
-*.tailwind.css linguaggio=CSS
+# JavaScript files
+*.js linguist-language=JavaScript
+*.jsx linguist-language=JavaScript
 
-# Configurazioni per Next.js e Vite
-vite.config.js linguaggio=JavaScript
-next.config.js linguaggio=JavaScript
-next.config.ts linguaggio=TypeScript
+# Style files
+*.css linguist-language=CSS
+*.scss linguist-language=SCSS
 
-# Configurazioni per Tailwind
-tailwind.config.js linguaggio=JavaScript
-tailwind.config.ts linguaggio=TypeScript
+# Documentation
+*.md text
+*.txt text
 
-# Ignora file o cartelle non rilevanti
-node_modules/* linguaggio=ignora
-dist/* linguaggio=ignora
-build/* linguaggio=ignora
-public/* linguaggio=ignora
+# Configuration files
+*.json text
+*.yaml text
+*.yml text
+*.config.js text
+*.config.ts text
+
+# Binary files
+*.png binary
+*.jpg binary
+*.gif binary
+*.ico binary
+*.svg text
+
+# Lock files
+package-lock.json binary
+yarn.lock binary
+
+# Backend specific
+backend/* linguist-language=JavaScript
+
+# Enforce Unix line endings
+*.ts text eol=lf
+*.tsx text eol=lf
+*.js text eol=lf
+*.jsx text eol=lf
+*.json text eol=lf
+*.css text eol=lf
+*.md text eol=lf
